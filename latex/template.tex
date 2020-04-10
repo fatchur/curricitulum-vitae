@@ -1,0 +1,210 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{image.jpg} % Profile picture
+
+\cvname{} % Your name
+\cvjobtitle{Mochammad Fatchur Rahman} % Job title/career
+
+\cvdate{} % Date of birth 
+\cvaddress{fatchur.rahman1@gmail.com} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{089527942835} % Phone number
+\cvsite{} % Personal website
+\cvmail{} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\skills{{Docker, Docker-Compose/5.}, {Flask, Flask-SocketIO, Gunicorn/4.5},{Opencv, Emgucv/5.5}, {Tensorflow, Keras, D-lib/5.},{Big Query, Mysql, Redis /5},{Numpy, Scipy, Pandas, Matplotlib/5.5},{C++/4}, {Python/5.5}, {Apache Kafka/5.}, {Apache Beam (Dataflow)/5.}, {GKE, GAE, GCF, GCE/5.}, {GCP: ML-Engine/5.}}
+
+%------------------------------------------------
+
+
+\makeprofile % Print the sidebar
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2012 - 2016}{Bogor Agricultural Universy (IPB){\normalfont }}{}{Major: Agricultural and Biosystem Engineering, Dept of Mechanical and Biosystem Engineering}
+	\twentyitem{}{Thesis: Vision-Based Pineapple Detection and Ripeness Classification}{}
+	{Thesis Video: \href{https://www.youtube.com/watch?v=d7238va97eQ&t=50}{youtube video link}}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 Repository
+%----------------------------------------------------------------------------------------
+
+
+\section{Git and Others}
+
+\begin{twenty}
+	\twentyitemshort{Github}{\href{https://github.com/fatchur} {github profile link}{\normalfont }}{}{}
+	\twentyitemshort{Pypi}{\href{https://pypi.org/user/fatchur/} {pypi: python repository profile link}{\normalfont }}{}{}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshort{Nov 2016 - Sept 2017}{ RnD staff (machine learning), WIR Group}
+	\twentyitemshort{Sept 2017 - Oct 2018}{ AI Engineer, nodeflux.io}
+	\twentyitemshort{Feb 2019 - present}{ AI Engineer, qoala.id}
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 AWARDS
+%----------------------------------------------------------------------------------------
+
+\section{Awards}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshort{2017}{The 3rd winner of go-hackaton 2017, held by Go-jek Indonesia}
+	
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Projects}
+
+\begin{twenty}
+	\twentyitem{---}{[2018-2019] Building a simple-tensor: Simplification of tensorflow operations}{}{
+	This package tries to simplify the usage of tensorflow (before the release of tf.keras, wkwkw). It contains tensor operations and losses. Some project packages are included, ex:
+    
+    1. Object detection(YOLO-V3) package (from scratch): With the "simple-tensor" you can modify the size of your YOLO-V3 model up to 30 times smaller or 6.7 MB than the original (>200MB).
+
+    2. Transfer learning package: A simplification of the tensorflow image classification. It depends on tensorflow slim as base architectures. Currently, "simple-tensor" only support for resnet, densenet, and inception-v4.
+    
+    3. Segmentation package: Deepl-lab, U-net(progress)
+    
+    4. RNN package: LSTM from scratch, support for wide, deep, or hybrid architecture.
+    
+    5. Face recognition: insightface (inferencing only)
+    
+    6. Object keypoint: further version
+    
+    Github: \href{https://github.com/fatchur/Simple-Tensor} {Github Link}
+    
+    Pypi: \href{https://pypi.org/project/simple-tensor/} {How to install}
+    }
+	
+	\twentyitem{Qoala.id}{[2019] Computer Vision for Automate Claim}{}{We are working with some technologies like object detection, segmentation, classification, keypoint detection, face alignment and recognition for building a system of automating insurance claim by video or image. For the infrastructure, we are using the Google Cloud Platform (GCP).}
+	
+	\twentyitem{Side Job}{PT. Pertamina, Unit Kilang Balongan, Vision Based Safety Analysis}{}{Description: We are developing a vision-based video analysis for Balongan Refinery workers. The system must be able to detect violations, ex: not using helm or standard jacket. 
+	
+	This project depends on some technologies:
+	
+	1. Opencv: Streaming the video from CCTV, manipulating the image.
+	
+	2. Kafka: Streaming the data between containers
+	
+	3. Redis: Saving the temporary data, ex: camera URL
+	
+	4. Tensorflow: Inferencing the input image
+	
+	5. Gunicorn, Gevent, Flask: Webserver
+	
+	6. Flask-SocketIO: Broadcasting the resulting image to the users
+	
+	7. Mysql: DB for the detected violations
+	
+	8. Docker}
+
+\end{twenty}
+
+\begin{twenty} % Environment for a list with descriptions
+   	\twentyitem{Nodeflux.io}{[2018] Small Image Reconstruction}{}{Reconstruction of low-resolution image to be a high-resolution with a generative adversarial network (part of deep learning), far better than the opencv resize}
+	
+	\twentyitem{Nodeflux.io}{[2018] License Plate Recognition}{}{A part of ASIAN Games and IMF Bali Meeting 2018 License Plate Recognition (Jakarta, Palembang, Bandung)}
+	
+	\twentyitem{Go-Hackathon}{[2016] Indonesian Food Images Recognition with Deep Learning}{}{Project video: \href{https://www.youtube.com/watch?v=G2WHTZhY-tU}{Youtube video link}}
+	
+	\twentyitem{WIR Group}{[2017] Face Recognition}{}{}
+	
+	\twentyitem{WIR Group}{[2016] Face Gender Recognition}{}{
+		First method: extract an improved local binary pattern and feed it to a classic neural network to predict face gender.
+		Second method: Work with deep learning (convolutional neural network) for getting better performance.}
+	
+	\twentyitem{WIR Group}{[2016] Face Expression Recognition and Age Estimation}{}{Work with deep learning to recognize the face expression and estimate the age}
+	
+	\twentyitem{IPB}{[2015] Vision Based Pineapple Detection and Quality Evaluation }{}{Research video: \href{https://www.youtube.com/watch?v=d7238va97eQ&t=50}{Youtube video link}}
+	
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\makeprofile % Print the sidebar
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
